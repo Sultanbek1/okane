@@ -1,0 +1,310 @@
+@use "./reset" as *;
+
+$--fs-xs: 0.75rem;
+$--fs-s: 0.875rem;
+$--fs-base: 1rem;
+$--fs-l: 1.125rem;
+$--fs-xl: 1.25rem;
+$--fs-2xl: 1.5rem;
+$--fs-3xl: 1.875rem;
+$--fs-4xl: 2.25rem;
+$--fs-5xl: 3rem;
+$--fw-normal: 400;
+$--fw-medium: 500;
+$--fw-bold: 700;
+$--fw-heavy: 800;
+$--lh-tight: 1.25;
+$--lh-base: 1.5;
+
+$content-size: clamp(0.875rem, 0.7045rem + 0.7273vw, 1.2rem);
+
+body {
+  font-family: "Rubik", sans-serif !important;
+}
+
+
+.header {
+  padding-bottom: 50px;
+}
+
+.header-img {
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.logo {
+  color: #fff;
+  font-size: $--fs-4xl;
+
+  &.black {
+    color: #111;
+  }
+}
+
+.banner {
+  .img {
+    img {
+      width: 100%;
+    }
+  }
+
+  .desc {
+    color: #fff;
+
+    h1 {
+      font-size: clamp(3.75rem, 3.4036rem + 1.4778vw, 4.6875rem);
+      font-size: clamp(3.125rem, 2.5477rem + 2.4631vw, 4.6875rem);
+      span {
+        color: #e03584;
+      }
+
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      line-height: 1.5;
+
+      margin-bottom: 80px;
+    }
+  }
+}
+$background-color: rgb(118, 52, 191);
+
+.download {
+  pointer-events: all;
+  border-radius: 22px;
+  font-size: 1.2rem;
+  overflow: hidden;
+  color: #fff;
+  text-decoration: none;
+
+  padding-block: 10px 12px;
+  padding-inline: 35px;
+
+  background-color: $background-color;
+
+  &.pink {
+    background-color: rgb(224, 53, 132);
+  }
+
+  &:hover {
+    color: #fff;
+
+    background-color: rgb(93, 27, 166);
+  }
+
+  &.pink:hover {
+    color: #fff;
+    background-color: rgb(244, 73, 152);
+  }
+}
+
+.about {
+  padding-block: 4rem;
+  .img {
+    img {
+      width: 100%;
+      border-radius: 3rem;
+    }
+  }
+
+  .d-flex > * {
+    width: 45%;
+  }
+
+  .desc {
+    .number {
+      color: rgb(118, 52, 191);
+      font-size: 20px;
+    }
+
+    .title {
+      font-size: 64px;
+      font-weight: 600;
+      color: #111;
+      line-height: 1.2;
+
+      span {
+        color: rgb(118, 52, 191);
+      }
+    }
+
+    .subtitle {
+      font-weight: 300;
+    }
+  }
+}
+
+.about2 {
+  background-color: #f3f5f6;
+}
+
+.reviews {
+  padding-block: 4rem;
+
+  background-color: rgb(0, 0, 0);
+
+  .title {
+    color: rgb(224, 53, 132);
+    font-size: 35px;
+  }
+
+  .question {
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+
+    font-weight: 700;
+    margin-bottom: 100px;
+  }
+
+  .ava {
+    color: #fff;
+
+    column-gap: 1.5rem;
+
+    .img {
+      height: 90px;
+      width: 80px;
+      img {
+        border-radius: 10px;
+        height: 90px;
+        width: 80px;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+    }
+
+    .ava-title {
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    .name {
+      font-size: 14px;
+    }
+  }
+}
+
+.statistics {
+  color: #fff;
+  background-color: #161616;
+  padding-block: 4.5rem;
+
+  .item {
+    text-align: center;
+  }
+
+  .title {
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+.call-to-action {
+  padding-block: 3.5rem;
+
+  .img {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: var(contain, cover);
+    }
+  }
+
+  .bg-img {
+    z-index: -1;
+
+    right: 0;
+    left: 0;
+
+    top: 0;
+    bottom: 0;
+
+    object-fit: cover;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .desc {
+    color: #fff;
+
+    .title {
+      font-size: 70px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      font-weight: 300;
+    }
+  }
+}
+
+.footer {
+  padding-block: 4rem;
+  .logo {
+    font-size: 40px;
+    margin-bottom: 7px;
+  }
+
+  a {
+    color: #111;
+  }
+
+  .terms {
+    font-weight: 300;
+  }
+
+  .socials {
+    margin-top: 30px;
+  }
+
+  .socials a {
+    text-decoration: none;
+
+    margin-right: 30px;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  label {
+    font-weight: 300;
+  }
+  input {
+    padding: 16px 56px 16px 16px;
+    height: 48px;
+    color: rgb(136, 136, 136);
+    background-color: rgb(241, 241, 241);
+    border: none;
+    width: min(500px, 100%);
+    margin-bottom: 30px;
+  }
+
+  button {
+    border: none;
+  }
+}
